@@ -1,8 +1,15 @@
-<h4>Title:</h4>
-<p><%= @list.title %></p>
+<div class="show">
+  <h4>Title:</h4>
+  <p>&nbsp;<%= @list.title %></p>
+</div>
 
-<h4>Body:</h4>
-<p><%= @list.body %></p>
+<div class="show">
+  <h4>Body:</h4>
+  <p>&nbsp;<%= @list.body %></p>
+</div>
 
-<%= link_to "Edit", edit_book_path(@list.id) %>
-<%= link_to "Back", '/books' %>
+<div class="show-bottom">
+  <%= link_to "Edit", edit_book_path(@list.id) %>
+  <p>&nbsp;|&nbsp;</p>
+  <%= link_to "Back", '/books' %>
+</div>

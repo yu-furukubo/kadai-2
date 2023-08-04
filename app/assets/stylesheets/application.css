@@ -13,3 +13,69 @@
  *= require_tree .
  *= require_self
  */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 30px;
+  font-family: '游ゴシック';
+}
+
+.headline{
+  margin: 20px 0;
+}
+
+.top{
+ margin: 30px;
+
+}
+
+.start{
+ margin: 30px;
+}
+
+.table-head{
+  margin: 20px;
+}
+
+.table-data{
+  padding: 5px;
+}
+
+.new{
+  margin: 40px 0 10px 0;
+
+}
+
+.show{
+  margin: 10px 0 20px 40px ;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show-bottom{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.notice{
+  margin: 30px;
+  font-size: 13px;
+  color: green;
+}
+
+.edithead{
+  margin-bottom: 20px;
+}
+
+.databox{
+  margin-bottom: 10px;
+}
+
+.errormessage{
+  color: red;
+}

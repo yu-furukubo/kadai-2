@@ -1,10 +1,7 @@
 class BooksController < ApplicationController
-  def new
-    @list = Book.new #後で消すかも
-  end
 
   def index
-    @list = Book.new  #新規投稿用のインスタンス変数
+    @list = Book.new
     @lists = Book.all
   end
 
@@ -17,10 +14,13 @@ class BooksController < ApplicationController
   end
 
   def update
-    list = Book.find(params[:id])
-    list.update(book_params)
-    flash[:notice] = "Book was successfully updated."
-    redirect_to book_path(list.id)
+    @list = Book.find(params[:id])
+    if @list.update(book_params)
+      flash[:notice] = "Book was successfully updated."
+      redirect_to book_path(@list.id)
+    else
+      render :edit
+    end
   end
 
   def create
